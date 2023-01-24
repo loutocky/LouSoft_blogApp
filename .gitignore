@@ -43,3 +43,4 @@ Thumbs.db
 
 # custom
 generate-clients.js
+swagger-codegen-cli.jar
