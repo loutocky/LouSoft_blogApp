@@ -1,1 +1,5 @@
 <p>post-list works!</p>
+
+<div *ngIf="posts$ | async as posts">
+  {{ posts|json }}
+</div>

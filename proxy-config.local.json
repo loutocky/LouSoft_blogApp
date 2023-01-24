@@ -1,0 +1,8 @@
+{
+  "/": {
+    "logLevel": "debug",
+    "secure": false,
+    "changeOrigin":true,
+    "target": "https://endevel-task.doc.endevel.cz"
+  }
+}
