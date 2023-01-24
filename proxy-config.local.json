@@ -1,5 +1,5 @@
 {
-  "/api": {
+  "/": {
     "logLevel": "debug",
     "secure": false,
     "changeOrigin":true,
