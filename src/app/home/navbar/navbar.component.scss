@@ -12,7 +12,14 @@
 
     nav {
       @include flex-row(0);
+      align-items: center;
       gap: $gap-small;
+
+      img {
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+      }
     }
   }
 }

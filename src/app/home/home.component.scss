@@ -2,4 +2,8 @@
 
 :host {
   @include flex-column();
+
+  .post-list {
+    @include flex-row();
+  }
 }

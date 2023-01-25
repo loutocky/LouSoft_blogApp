@@ -9,7 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PostDetailComponent } from './post-list/post-detail/post-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostRowComponent } from './post-list/post-row/post-row.component';
-import { BannerComponent } from './navbar/banner/banner.component';
+import { BannerComponent } from './banner/banner.component';
 import { NgParticlesModule } from "ng-particles";
 
 export const HOME_ROUTES: Routes = [

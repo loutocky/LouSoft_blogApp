@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+
+:host {
+  @include flex-row(0);
+
+  background-color: var(--primary-90);
+  color: var(--primary-0);
+  padding: $general-padding;
+}

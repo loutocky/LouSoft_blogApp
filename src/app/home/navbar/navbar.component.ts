@@ -8,4 +8,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  constructor() {
+
+  }
+
+  navigate(): void {
+    window.open('https://github.com/loutocky', '_blank');
+  }
 }
