@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Demo
 
-You can find demo online [BLOG_APP](https://blog.lousfot.cz).
+You can find demo online [BLOG_APP](https://blog.lousoft.cz).
 
 ## Development server
 
