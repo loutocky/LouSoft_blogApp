@@ -1,0 +1,18 @@
+@import 'mixins';
+@import 'variables';
+
+:host {
+  @include flex-column(0);
+
+  mat-toolbar {
+    @include flex-row();
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--info-bg-40);
+
+    nav {
+      @include flex-row(0);
+      gap: $gap-small;
+    }
+  }
+}

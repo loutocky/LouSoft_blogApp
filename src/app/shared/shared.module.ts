@@ -4,9 +4,12 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MATERIALS_MODULES } from '.';
 
 @NgModule({
   imports: [
+    MATERIALS_MODULES,
     CommonModule,
     FormsModule,
     RouterModule,
@@ -15,6 +18,7 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule,
   ],
   exports: [
+    MATERIALS_MODULES,
     CommonModule,
     FormsModule,
     RouterModule,

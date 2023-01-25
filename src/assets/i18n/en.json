@@ -1,5 +1,7 @@
 {
   "app": {
-    "title": "Hello"
+    "logo": "Logo",
+    "welcome": "Welcome to BlogApp",
+    "menu-item": "Menu item"
   }
 }

@@ -1,0 +1,68 @@
+// border radius
+@mixin border-radius {
+  border-radius: 4px;
+}
+
+@mixin border-radius-top {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+@mixin border-radius-bottom {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+@mixin border-radius-left {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+@mixin border-radius-right {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+// flex
+@mixin flex-column($flex: 1, $overflow: auto) {
+  display: flex;
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  flex-flow: column;
+  flex: $flex 0 auto;
+  overflow: $overflow;
+}
+
+@mixin flex-row($flex: 1) {
+  display: flex;
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  flex-flow: row;
+  flex: $flex 0 auto;
+}
+
+@mixin flex-center() {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-1() {
+  flex: 1 0 auto;
+}
+
+@mixin font-bold() {
+  font-weight: bold;
+}
+
+@mixin font-semibold() {
+  font-weight: 600;
+}
+
+// ellipsis
+@mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
