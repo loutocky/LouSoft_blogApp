@@ -1,5 +1,11 @@
 {
-  "/": {
+  "/blog": {
+    "logLevel": "debug",
+    "secure": false,
+    "changeOrigin":true,
+    "target": "https://endevel-task.doc.endevel.cz"
+  },
+  "/tag": {
     "logLevel": "debug",
     "secure": false,
     "changeOrigin":true,
