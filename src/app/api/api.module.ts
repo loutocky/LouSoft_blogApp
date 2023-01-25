@@ -8,7 +8,7 @@ import {
 } from '../../../client-shared';
 
 export function basePathFactory(): string {
-  const baseUrl = document.getElementsByTagName('base')[0].href.replace(/\/$/, '');
+  const baseUrl = document.getElementsByTagName('base')[0].href.replace(/\/$/, '/api');
   return baseUrl;
 }
 
