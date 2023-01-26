@@ -1,5 +1,14 @@
-<p>post-list works!</p>
-
-<div *ngIf="posts$ | async as posts">
-
+<div class="container">
+  <h2>{{'app.posts.title'|translate}}</h2>
+  <div class="posts" *ngIf="posts$ | async as posts; else loading">
+    <ng-container *ngIf="tags$ | async as tags; else loading">
+      <app-post-row *ngFor="let post of posts" [post]="post" [tags]="tags"></app-post-row>
+    </ng-container>
+  </div>
 </div>
+
+<mat-paginator *ngIf="postCount" [length]="postCount" [pageSize]="pageCount" [pageSizeOptions]="[1, 2, 3]" showFirstLastButtons></mat-paginator>
+
+<ng-template #loading>
+  <mat-spinner [diameter]="32"></mat-spinner>
+</ng-template>

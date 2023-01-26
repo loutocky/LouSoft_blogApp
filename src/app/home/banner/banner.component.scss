@@ -1,6 +1,8 @@
 @import 'variables';
+@import 'mixins';
 
 :host {
+  @include flex-column(0);
   position: relative;
 
   .container {
@@ -18,7 +20,7 @@
 
     .title {
       font-size: var(--font-size-22);
-      color: var(--primary-0);
+      color: var(--primary-foreground);
       text-transform: uppercase;
       position: absolute;
       left: 50%;

@@ -1,7 +1,7 @@
 @import 'mixins';
 
 :host {
-  @include flex-column();
+  @include flex-column(0);
 
   .post-list {
     @include flex-row();

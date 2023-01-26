@@ -47,13 +47,13 @@ export class BannerComponent {
       }
     },
     particles: {
-      color: { value: "#79C0FF" },
+      color: { value: "#0bceaf" },
       line_linked: {
-        color: "#79C0FF",
+        color: "#0bceaf",
         distance: 50,
         enable: true,
-        opacity: 0.4,
-        width: 1
+        opacity: 0.8,
+        width: 10
       },
       move: {
         attract: { enable: false, rotateX: 600, rotateY: 1200 },

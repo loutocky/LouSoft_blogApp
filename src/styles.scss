@@ -2,6 +2,7 @@
 
 @import 'scss/main.scss';
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 html,
 body {
@@ -43,6 +44,12 @@ body {
   --label-small: 8px;
 
   // colors
+
+  --primary-background: #212529;
+  --secondary-background: #202026;
+  --primary-foreground: #fff8dc;
+  --primary-foreground-hover: #0bceaf;
+
   --primary-100: #1F1F1F;
   --primary-90: #262626;
   --primary-80: #333333;
@@ -55,40 +62,4 @@ body {
   --primary-10: #E6E6E6;
   --primary-5: #F2F2F2;
   --primary-0: #FFFFFF;
-
-  --info-fg-100: #FFFFFF;
-  --info-bg-100: #0D2D6B;
-  --info-fg-80: #FFFFFF;
-  --info-bg-80: #206FEB;
-  --info-fg-40: #08538D;
-  --info-bg-40: #79C0FF;
-  --info-fg-20: #08538D;
-  --info-bg-20: #CAE8FF;
-
-  --success-fg-100: #FFFFFF;
-  --success-bg-100: #053A15;
-  --success-fg-80: #FFFFFF;
-  --success-bg-80: #228636;
-  --success-fg-40: #117551;
-  --success-bg-40: #56D364;
-  --success-fg-20: #117551;
-  --success-bg-20: #AFF5B4;
-
-  --error-fg-100: #FFFFFF;
-  --error-bg-100: #67090D;
-  --error-fg-80: #FFFFFF;
-  --error-bg-80: #DA3633;
-  --error-fg-40: #962222;
-  --error-bg-40: #FFA198;
-  --error-fg-20: #962222;
-  --error-bg-20: #FFDAD5;
-
-  --warning-fg-100: #FFFFFF;
-  --warning-bg-100: #A9781B;
-  --warning-fg-80: #FFFFFF;
-  --warning-bg-80: #F2AB26;
-  --warning-fg-40: #A9781B;
-  --warning-bg-40: #F7CD7D;
-  --warning-fg-20: #A9781B;
-  --warning-bg-20: #FFDAD5;
 }

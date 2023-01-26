@@ -1,0 +1,31 @@
+@import 'variables';
+@import 'mixins';
+
+:host {
+  @include flex-column();
+  @include flex-center();
+  background-color: #303035;
+
+  .container {
+    @include flex-column();
+    align-items: center;
+    padding: $general-padding 0;
+
+    h2 {
+      color: var(--primary-foreground);
+    }
+
+    .posts {
+      @include flex-column();
+      @include flex-center();
+      gap: $gap-small;
+      flex: 1;
+    }
+  }
+
+  mat-spinner {
+    @include flex-column();
+    align-self: center;
+    justify-self: center;
+  }
+}

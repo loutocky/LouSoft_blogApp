@@ -8,12 +8,27 @@
     @include flex-row();
     align-items: center;
     justify-content: space-between;
-    background-color: var(--info-bg-40);
+    color: var(--primary-foreground);
+    background-color: var(--primary-background);
+
+    .logo {
+      cursor: pointer;
+
+      &:hover {
+        color: var(--primary-foreground-hover);
+      }
+    }
 
     nav {
       @include flex-row(0);
       align-items: center;
       gap: $gap-small;
+
+      button {
+        &:hover {
+          color: var(--primary-foreground-hover);
+        }
+      }
 
       img {
         cursor: pointer;

@@ -1,0 +1,14 @@
+@import 'mixins';
+@import 'variables';
+
+:host {
+  button {
+    height: 24px;
+    padding: $general-padding-x-small;
+    background-color: #303035;
+
+    &:hover {
+      background-color: var(--secondary-background);
+    }
+  }
+}

@@ -4,8 +4,10 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+
 import { MATERIALS_MODULES } from '.';
+import { BadgeComponent } from './badge/badge.component';
 
 @NgModule({
   imports: [
@@ -16,6 +18,10 @@ import { MATERIALS_MODULES } from '.';
     HttpClientModule,
     ReactiveFormsModule,
     TranslateModule,
+    LoggerModule.forRoot({
+      level: NgxLoggerLevel.DEBUG,
+      serverLogLevel: NgxLoggerLevel.ERROR,
+    }),
   ],
   exports: [
     MATERIALS_MODULES,
@@ -25,6 +31,11 @@ import { MATERIALS_MODULES } from '.';
     HttpClientModule,
     ReactiveFormsModule,
     TranslateModule,
+    LoggerModule,
+    BadgeComponent,
+  ],
+  declarations: [
+    BadgeComponent,
   ],
 })
 export class SharedModule {

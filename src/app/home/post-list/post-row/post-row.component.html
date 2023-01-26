@@ -1,1 +1,15 @@
-<p>post-row works!</p>
+<div class="post">
+  <div class="img">
+    <img *ngIf="!missingImage" [src]="post.thumbnail" [height]="80" (error)="error($event)">
+    <div *ngIf="missingImage" class="no-img">
+      <mat-icon  aria-hidden="false" aria-label="filter icon">no_photography</mat-icon>
+    </div>
+  </div>
+  <div class="content">
+    <h3 class="title">{{ post.title }}</h3>
+    <div class="detail">{{ post.detail }}</div>
+    <div class="tags">
+      <app-badge *ngFor="let tag of tagsStr" [tag]="tag"></app-badge>
+    </div>
+  </div>
+</div>

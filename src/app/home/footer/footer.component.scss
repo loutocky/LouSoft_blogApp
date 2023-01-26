@@ -3,9 +3,12 @@
 
 :host {
   @include flex-row(0);
-
-  background-color: var(--primary-90);
-  color: var(--primary-0);
+  background-color: var(--primary-background);
+  color: var(--primary-foreground);
   padding: $general-padding-small $general-padding;
   font-size: var(--font-size-14);
+
+  &:hover {
+    color: var(--primary-foreground-hover);
+  }
 }
