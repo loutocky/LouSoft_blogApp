@@ -6,5 +6,6 @@
 
   background-color: var(--primary-90);
   color: var(--primary-0);
-  padding: $general-padding;
+  padding: $general-padding-small $general-padding;
+  font-size: var(--font-size-14);
 }

@@ -1,11 +1,8 @@
-<header class="header-menu">
-  <mat-toolbar>
-    <div class="logo">{{'app.logo'|translate}}</div>
-    <nav>
-      <button mat-button>{{'app.menu-item'|translate}}</button>
-      <button mat-button>{{'app.menu-item'|translate}}</button>
-      <button mat-button>{{'app.menu-item'|translate}}</button>
-      <img [src]="'/assets/images/github-logo.png'" (click)="navigate()">
-    </nav>
-  </mat-toolbar>
-</header>
+<mat-toolbar>
+  <div class="logo">{{'app.logo'|translate}}</div>
+  <nav>
+    <button mat-button>{{'app.menu-item'|translate}}</button>
+    <button mat-button>{{'app.menu-item'|translate}}</button>
+    <img [src]="'/assets/images/github-logo.png'" (click)="navigate()">
+  </nav>
+</mat-toolbar>
