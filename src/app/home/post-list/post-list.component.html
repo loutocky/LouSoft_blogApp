@@ -5,7 +5,7 @@
     </div>
 
     <ng-container *ngIf="posts$ | async as posts; else loading">
-      <ng-container *ngIf="tags$ | async as tags">
+      <ng-container *ngIf="tags$ | async as tags; else loading">
         <div class="grid gap-6 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-5">
           <app-post-row *ngFor="let post of posts" [post]="post" [tags]="tags"></app-post-row>
         </div>

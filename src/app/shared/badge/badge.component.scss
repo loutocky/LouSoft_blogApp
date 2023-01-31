@@ -5,7 +5,7 @@
   button {
     height: 24px;
     padding: $general-padding-x-small;
-    background-color: #303035;
+    background-color: var(--primary-background);
 
     &:hover {
       background-color: var(--secondary-background);

@@ -8,6 +8,11 @@
     </div>
     <a [routerLink]="'blog/' + post.id" class="my-8 inline-block text-[22px] font-extrabold text-black line-clamp-2 text-[#fff8dc] min-h-[64px]">{{ post.title }}</a>
     <p class="mb-10 text-lg transition line-clamp-3 text-[#fff8dc] min-h-[88px]">{{ post.detail }}</p>
+
+    <div class="flex items-center justify-center line-clamp-2 min-h-[72px] transition">
+      <app-badge class="rounded-full" *ngFor="let tag of tagsStr" [tag]="tag"></app-badge>
+    </div>
+
     <a [routerLink]="'blog/' + post.id" class="flex h-11 w-11 items-center justify-center rounded-full bg-[#fff8dc] transition group-hover:bg-black rtl:rotate-180">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black transition group-hover:text-[#fff8dc]">
         <path d="M9.41083 14.4109L10.5892 15.5892L16.1783 10.0001L10.5892 4.41089L9.41083 5.58922L12.9883 9.16672H5V10.8334H12.9883L9.41083 14.4109Z" fill="currentColor" />
