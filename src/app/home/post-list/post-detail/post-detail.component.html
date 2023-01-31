@@ -8,12 +8,12 @@
     </div>
 
     <div class="flex flex-col flex-wrap items-center justify-center text-[#fff8dc] max-w-[100vw] p-16">
-      <p class="my-4 inline-block text-[22px] font-extrabold" [title]="p.title">{{ p.title }}</p>
-      <div class="flex items-center justify-center transition mb-4">
+      <p class="my-4 inline-block text-[22px] font-extrabold text-center" [title]="p.title">{{ p.title }}</p>
+      <div class="flex items-center justify-center transition mb-4 flex-wrap">
         <app-badge class="rounded-full" *ngFor="let tag of tagsStr" [tag]="tag"></app-badge>
       </div>
-      <p class="mb-10 text-lg transition" [title]="p.detail">{{ p.detail }}</p>
-      <p class="mb-10 text-lg transition" [title]="p.text">{{ p.text }}</p>
+      <p class="mb-10 text-lg transition text-center" [title]="p.detail">{{ p.detail }}</p>
+      <p class="mb-10 text-lg transition text-center" [title]="p.text">{{ p.text }}</p>
     </div>
   </div>
 </div>
