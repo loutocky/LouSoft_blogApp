@@ -34,7 +34,10 @@ export class PostListComponent implements OnInit {
       // there should be param for paging
       this.posts$ = <any>this.blogApi.returnsListOfBlogPosts_().pipe(
         tap((posts: any) => this._posts = posts),
-        map((posts: any) => posts.slice(0, this.pageCount)),
+        map((posts: any) => {
+          const sorted = posts.sort((a: any, b: any) => a.id - b.id);
+          return sorted.slice(0, this.pageCount);
+        }),
         finalize(() => {
 
         })

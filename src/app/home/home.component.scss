@@ -1,9 +1,5 @@
 @import 'mixins';
 
 :host {
-  @include flex-column(0);
-
-  .post-list {
-    @include flex-row();
-  }
+  @include flex-column();
 }

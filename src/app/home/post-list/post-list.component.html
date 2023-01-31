@@ -1,13 +1,18 @@
-<div class="container">
-  <h2>{{'app.posts.title'|translate}}</h2>
-  <div class="posts" *ngIf="posts$ | async as posts; else loading">
-    <ng-container *ngIf="tags$ | async as tags; else loading">
-      <app-post-row *ngFor="let post of posts" [post]="post" [tags]="tags"></app-post-row>
+<section class="post-list bg-cover bg-center bg-no-repeat">
+  <div class="container m-4">
+    <div class="heading text-center m-4">
+      <h2 class="text-2xl">{{'app.posts.title'|translate}}</h2>
+    </div>
+
+    <ng-container *ngIf="posts$ | async as posts; else loading">
+      <ng-container *ngIf="tags$ | async as tags">
+        <div class="grid gap-6 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-5">
+          <app-post-row *ngFor="let post of posts" [post]="post" [tags]="tags"></app-post-row>
+        </div>
+      </ng-container>
     </ng-container>
   </div>
-</div>
-
-<mat-paginator *ngIf="postCount" [length]="postCount" [pageSize]="pageCount" [pageSizeOptions]="[1, 2, 3]" showFirstLastButtons></mat-paginator>
+</section>
 
 <ng-template #loading>
   <mat-spinner [diameter]="32"></mat-spinner>

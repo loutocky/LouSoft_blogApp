@@ -3,6 +3,10 @@
 @import 'scss/main.scss';
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwindcss/line-clamp;
 
 html,
 body {
@@ -45,8 +49,8 @@ body {
 
   // colors
 
-  --primary-background: #212529;
-  --secondary-background: #202026;
+  --primary-background: #0A111E;
+  --secondary-background: #121925;
   --primary-foreground: #fff8dc;
   --primary-foreground-hover: #0bceaf;
 

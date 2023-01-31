@@ -2,7 +2,7 @@
 @import 'mixins';
 
 :host {
-  @include flex-column(0);
+  @include flex-column(1, hidden);
   position: relative;
 
   .container {
@@ -15,6 +15,7 @@
     ::ng-deep {
       #tsparticles {
         height: 320px;
+        width: 100vw;
       }
     }
 

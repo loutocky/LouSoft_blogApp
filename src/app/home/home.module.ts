@@ -13,8 +13,10 @@ import { BannerComponent } from './banner/banner.component';
 import { NgParticlesModule } from "ng-particles";
 
 export const HOME_ROUTES: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'blog/:id', component: PostDetailComponent },
+  { path: '', component: HomeComponent, children: [
+    { path: '', component: PostListComponent },
+    { path: 'blog/:id', component: PostDetailComponent },
+  ] },
 ];
 
 @NgModule({

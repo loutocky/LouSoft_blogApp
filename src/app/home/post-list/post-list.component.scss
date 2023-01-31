@@ -3,8 +3,12 @@
 
 :host {
   @include flex-column();
-  @include flex-center();
-  background-color: #303035;
+  align-items: center;
+  background-color: var(--secondary-background);
+
+  .post-list {
+    @include flex-row();
+  }
 
   .container {
     @include flex-column();
