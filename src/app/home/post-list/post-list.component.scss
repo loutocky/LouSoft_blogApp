@@ -7,7 +7,8 @@
   background-color: var(--secondary-background);
 
   .post-list {
-    @include flex-row();
+    @include flex-column();
+    align-items: center;
   }
 
   .container {

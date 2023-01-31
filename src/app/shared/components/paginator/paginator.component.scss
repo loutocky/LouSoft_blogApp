@@ -2,5 +2,7 @@
 @import 'mixins';
 
 :host {
-
+  .left {
+    transform: rotate(180deg);
+  }
 }
