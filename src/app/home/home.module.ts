@@ -15,7 +15,7 @@ import { NgParticlesModule } from "ng-particles";
 export const HOME_ROUTES: Routes = [
   { path: '', component: HomeComponent, children: [
     { path: '', component: PostListComponent },
-    { path: 'blog/:id', component: PostDetailComponent },
+    { path: 'post/:id', component: PostDetailComponent },
   ] },
 ];
 

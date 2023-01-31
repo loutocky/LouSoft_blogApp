@@ -1,7 +1,7 @@
 <mat-toolbar>
-  <div class="logo">{{'app.logo'|translate}}</div>
+  <div class="logo" [routerLink]="'/'">{{ 'app.logo'|translate }}</div>
   <nav>
-    <button mat-button>{{'app.menu-item'|translate}}</button>
+    <button mat-button [routerLink]="'/'">{{ 'app.home'|translate }}</button>
     <button mat-button>{{'app.menu-item'|translate}}</button>
     <img [src]="'/assets/images/github-logo.png'" (click)="navigate()">
   </nav>

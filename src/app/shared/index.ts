@@ -88,3 +88,5 @@ export const MATERIALS_MODULES: Array<any> = [
   PortalModule,
   ScrollingModule,
 ]
+
+export { Constants } from './models/constants';

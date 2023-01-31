@@ -1,1 +1,25 @@
-<p>post-detail works!</p>
+<div data-aos="fade-up" data-aos-duration="1000">
+  <div *ngIf="post$ | async as p; else loading" class="group bg-gray-800 pt-32 transition border-transparent duration-500">
+    <div class="flex items-center justify-center rounded-full bg-secondary transition">
+      <img class="rounded-lg object-cover min-h-[180px] max-h-[320px]" *ngIf="!missingImage" [src]="p.thumbnail" (error)="error($event)">
+      <div *ngIf="missingImage" class="no-img rounded-lg object-cover flex items-center justify-center min-h-[180px] max-h-[320px]">
+        <img class="rounded-lg object-cover min-h-[180px]" [src]="'/assets/images/missing-image.png'">
+      </div>
+    </div>
+
+    <div class="flex flex-col flex-wrap items-center justify-center text-[#fff8dc] max-w-[100vw] p-16">
+      <p class="my-4 inline-block text-[22px] font-extrabold">{{ p.title }}</p>
+      <div class="flex items-center justify-center transition mb-4">
+        <app-badge class="rounded-full" *ngFor="let tag of tagsStr" [tag]="tag"></app-badge>
+      </div>
+      <p class="mb-10 text-lg transition">{{ p.detail }}</p>
+      <p class="mb-10 text-lg transition">{{ p.text }}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="flex items-center justify-center flex-1 loading group bg-gray-800 pt-32 transition border-transparent duration-500 min-h-[75vh]">
+    <mat-spinner [diameter]="32"></mat-spinner>
+  </div>
+</ng-template>

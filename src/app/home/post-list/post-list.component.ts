@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { BlogPost, BlogService, Tag, TagService } from 'api';
-import { filter, finalize, map, Observable, publishReplay, refCount, tap } from 'rxjs';
+import { finalize, map, Observable, publishReplay, refCount, tap } from 'rxjs';
+import { Constants } from 'src/app/shared';
+import { StorageService } from 'src/app/shared/services/storage.service';
 
 @Component({
   selector: 'app-post-list',
@@ -24,25 +26,31 @@ export class PostListComponent implements OnInit {
   constructor(
     private blogApi: BlogService,
     private tagApi: TagService,
-    ) {
+    private storageService: StorageService,
+  ) {
 
-    }
+  }
 
-    ngOnInit(): void {
-      // there is missing some anotation in backend, service returns object instead of array
-      // convert to any
-      // there should be param for paging
-      this.posts$ = <any>this.blogApi.returnsListOfBlogPosts_().pipe(
-        tap((posts: any) => this._posts = posts),
-        map((posts: any) => {
-          const sorted = posts.sort((a: any, b: any) => a.id - b.id);
-          return sorted.slice(0, this.pageCount);
-        }),
-        finalize(() => {
+  ngOnInit(): void {
+    // there is missing some anotation in backend, service returns object instead of array
+    // convert to any
+    // there should be param for paging
+    this.posts$ = <any>this.blogApi.returnsListOfBlogPosts_().pipe(
+      tap((posts: any) => this._posts = posts),
+      map((posts: any) => {
+        const sorted = posts.sort((a: any, b: any) => a.id - b.id);
+        return sorted.slice(0, this.pageCount);
+      }),
+      finalize(() => {
 
-        })
-      );
+      })
+    );
 
-      this.tags$ = <any>this.tagApi.getAListOfTags_().pipe(publishReplay(1), refCount());
-    }
+    // there is missing some anotation in backend, service returns object instead of array
+    this.tags$ = <any>this.tagApi.getAListOfTags_().pipe(publishReplay(1), refCount()).pipe(
+      tap((tags) => {
+        this.storageService.setStorage(Constants.TAGS, JSON.stringify(tags));
+      })
+    );
+  }
 }

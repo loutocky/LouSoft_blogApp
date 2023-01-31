@@ -4,6 +4,7 @@
 :host {
   @include flex-column(1, hidden);
   position: relative;
+  margin-top: #{ 8 * $general-margin-small };
 
   .container {
     width: 100vw;

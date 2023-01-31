@@ -7,7 +7,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 import { MATERIALS_MODULES } from '.';
-import { BadgeComponent } from './badge/badge.component';
+import { BadgeComponent } from './components/badge/badge.component';
+import { SharedService } from './services/shared.service';
+import { StorageService, StorageSessionService } from './services/storage.service';
 
 @NgModule({
   imports: [
@@ -36,6 +38,11 @@ import { BadgeComponent } from './badge/badge.component';
   ],
   declarations: [
     BadgeComponent,
+  ],
+  providers: [
+    StorageService,
+    StorageSessionService,
+    SharedService,
   ],
 })
 export class SharedModule {

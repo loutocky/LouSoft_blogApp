@@ -1,11 +1,12 @@
 {
   "app": {
+    "home": "Home",
     "logo": "Logo",
-    "welcome": "Welcome to BlogApp",
     "menu-item": "Menu item",
     "posts": {
-      "title": "Posts",
-      "detail": "Detial"
-    }
+      "detail": "Detial",
+      "title": "Posts"
+    },
+    "welcome": "Welcome to BlogApp"
   }
 }

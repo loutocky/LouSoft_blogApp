@@ -3,6 +3,11 @@
 
 :host {
   @include flex-column(0);
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+  width: 100vw;
 
   mat-toolbar {
     @include flex-row();

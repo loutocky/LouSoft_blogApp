@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { BlogPost, Tag } from 'api';
+import { BlogPost } from 'api';
 import { NGXLogger } from 'ngx-logger';
+import { SharedService } from 'src/app/shared/services/shared.service';
 
 @Component({
   selector: 'app-post-row',
@@ -12,20 +13,15 @@ export class PostRowComponent implements OnChanges {
   @Input()
   post: BlogPost;
 
-  @Input()
-  tags: Tag[];
-
   private _missingImage: boolean = false;
   get missingImage(): boolean {
     return this._missingImage;
   }
 
-  private _tagsStr: string[] = [];
-  get tagsStr(): string[] {
-    return this._tagsStr;
-  }
+  tagsStr: string[] = [];
 
   constructor(
+    private sharedService: SharedService,
     private logger: NGXLogger,
   ) {
 
@@ -34,13 +30,8 @@ export class PostRowComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     this.logger.debug('Changes ', changes);
 
-    if (changes['post']?.currentValue && changes['tags']?.currentValue) {
-      this.post.tags.forEach((id: number) => {
-        const tag = this.tags.find((t: Tag) => t.id === id);
-        if (tag) {
-          this._tagsStr.push(tag.name);
-        }
-      })
+    if (changes['post']?.currentValue) {
+      this.tagsStr = this.sharedService.getTags(this.post.tags);
     }
   }
 
