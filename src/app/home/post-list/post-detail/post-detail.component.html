@@ -1,8 +1,8 @@
 <div data-aos="fade-up" data-aos-duration="1000">
   <div *ngIf="post$ | async as p; else loading" class="group bg-gray-800 pt-32 transition border-transparent duration-500">
     <div class="flex items-center justify-center rounded-full bg-secondary transition">
-      <img class="rounded-lg object-cover min-h-[180px] max-h-[320px]" *ngIf="!missingImage" [src]="p.thumbnail" (error)="error($event)">
-      <div *ngIf="missingImage" class="no-img rounded-lg object-cover flex items-center justify-center min-h-[180px] max-h-[320px]">
+      <img class="rounded-lg object-cover min-h-[180px] max-w-[360px]" *ngIf="!missingImage" [src]="p.thumbnail" (error)="error($event)">
+      <div *ngIf="missingImage" class="no-img rounded-lg object-cover flex items-center justify-center min-h-[180px] max-w-[360px]">
         <img class="rounded-lg object-cover min-h-[180px]" [src]="'/assets/images/missing-image.png'">
       </div>
     </div>
